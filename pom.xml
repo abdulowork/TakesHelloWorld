@@ -34,12 +34,24 @@
                             </execution>
                         </executions>
                         <configuration>
-                            <mainClass>hack.test.Main</mainClass> <!-- your main class -->
+                            <mainClass>Main</mainClass> <!-- your main class -->
                             <cleanupDaemonThreads>false</cleanupDaemonThreads>
                             <arguments>
                                 <argument>--port=${port}</argument>
                             </arguments>
                         </configuration>
+                    </plugin>
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-dependency-plugin</artifactId>
+                        <version>3.0.2</version>
+                        <executions>
+                            <execution>
+                                <id>copy-dependencies</id>
+                                <phase>package</phase>
+                                <goals><goal>copy-dependencies</goal></goals>
+                            </execution>
+                        </executions>
                     </plugin>
                 </plugins>
             </build>

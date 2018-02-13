@@ -6,14 +6,14 @@ import org.takes.facets.fork.TkFork;
 public class Main {
 
     public static void main(final String... args) throws Exception {
-        new FtBasic(
-                new TkFork(
-                        new FkRegex(
-                                "/",
-                                "hello, world!"
-                        )
-                ),
-                443
-        ).start(Exit.NEVER);
+      new FtBasic(
+        new TkFork(
+          new FkRegex(
+            "/",
+            "hello, world!"
+          )
+        ),
+        80
+      ).start(Exit.NEVER);
     }
 }
